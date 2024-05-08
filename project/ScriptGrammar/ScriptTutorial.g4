@@ -11,6 +11,8 @@ statementblock : statement									#SingleStatement
 statement : VAR (IDENTIFIER (COMMA IDENTIFIER)*)? SEMI													# VarDeclaration 
 		  | IF LPAREN expression RPAREN block1=statementblock (ELSE block2=statementblock)?				# IfStatement
 		  | FOR LPAREN asgn=expression SEMI comp=expression SEMI inc=expression RPAREN statementblock	# ForLoop
+		  | WHILE LPAREN comp=expression RPAREN statementblock											# WhileLoop
+		  | DO LBRACKET statement* RBRACKET WHILE LPAREN comp=expression RPAREN SEMI					# DoWhileLoop
 		  | expression SEMI																				# StatementExpression
 		  ;
 
@@ -41,7 +43,9 @@ expression : IDENTIFIER type=(INC|DEC)											#ExpressionUnary
 IF   : 'if' ;
 ELSE : 'else';
 VAR  : 'var';
-FOR : 'for';
+FOR  : 'for';
+WHILE:'while';
+DO	 :'do';
 
 AND : '&&' ;
 OR  : '||' ;
