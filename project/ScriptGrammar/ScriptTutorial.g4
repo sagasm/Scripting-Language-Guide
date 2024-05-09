@@ -15,7 +15,7 @@ statement : VAR (IDENTIFIER (COMMA IDENTIFIER)*)? SEMI													# VarDeclarat
 		  | DO LBRACKET statement* RBRACKET WHILE LPAREN comp=expression RPAREN SEMI					# DoWhileLoop
 		  | expression SEMI																				# StatementExpression
 		  ;
-
+ 
 functionparam : expression (COMMA expression)*
 			  ;
 

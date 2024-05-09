@@ -11,6 +11,15 @@
         if(j == 15)
             OutputText("J is 15 now!");
     }
+    while(i<15)
+    {
+        i++;
+    }
+    do
+    {
+        i++;
+    }while(i<20);
+
     OutputText("We're done! The value of j is: ");
     OutputValue(j);
 }
