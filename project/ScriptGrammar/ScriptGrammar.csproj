@@ -58,7 +58,8 @@
   <ItemGroup>
     <Antlr4 Include="ScriptTutorial.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>ScriptTutorial</CustomToolNamespace>
+      <CustomToolNamespace>ScriptTutorial</CustomToolNamespace>    
+      <Package>ScriptTutorial</Package> 
     </Antlr4>
   </ItemGroup>
   <ItemGroup>
